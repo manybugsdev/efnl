@@ -82,10 +82,10 @@ function App() {
         pointerEvents: 'none'
       }}>
         <div>+</div>
-        <div style={{ fontSize: '12px', marginTop: '20px' }}>
+        <div className="crosshair-text" style={{ fontSize: '12px', marginTop: '20px' }}>
           {isMobile 
-            ? 'Use joystick to move • Tap apple button to throw'
-            : 'Click to lock pointer • WASD to move • Mouse to look'
+            ? 'Use joystick to move • Tap 🍎 to throw'
+            : 'Click to lock pointer • WASD to move • SPACE to throw • Mouse to look'
           }
         </div>
       </div>

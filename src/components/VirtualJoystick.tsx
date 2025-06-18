@@ -118,8 +118,8 @@ export const VirtualJoystick = ({ onMove }: VirtualJoystickProps) => {
         width: `${radius * 2}px`,
         height: `${radius * 2}px`,
         borderRadius: '50%',
-        backgroundColor: 'rgba(255, 255, 255, 0.1)',
-        border: '2px solid rgba(255, 255, 255, 0.3)',
+        backgroundColor: 'rgba(255, 255, 255, 0.15)',
+        border: '3px solid rgba(255, 255, 255, 0.4)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -137,8 +137,8 @@ export const VirtualJoystick = ({ onMove }: VirtualJoystickProps) => {
           width: `${knobRadius * 2}px`,
           height: `${knobRadius * 2}px`,
           borderRadius: '50%',
-          backgroundColor: 'rgba(255, 255, 255, 0.7)',
-          border: '1px solid rgba(255, 255, 255, 0.9)',
+          backgroundColor: 'rgba(255, 255, 255, 0.9)',
+          border: '2px solid rgba(255, 255, 255, 1)',
           pointerEvents: 'none'
         }}
       />

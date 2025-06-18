@@ -28,6 +28,10 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  touch-action: none; /* Prevent default touch behaviors */
+  -webkit-touch-callout: none; /* Disable callout, image and text selection */
+  -webkit-user-select: none; /* Disable text selection */
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight */
 }
 
 h1 {
@@ -64,5 +68,33 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .crosshair-text {
+    font-size: 10px !important;
+    margin-top: 10px !important;
+  }
+  
+  .virtual-joystick {
+    opacity: 0.8;
+  }
+  
+  .throw-button {
+    opacity: 0.8;
+  }
+}
+
+/* Prevent context menu on mobile */
+@media (pointer: coarse) {
+  * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 }

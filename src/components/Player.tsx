@@ -83,6 +83,12 @@ export const Player = forwardRef<PlayerRef, PlayerProps>(({ onThrowApple, virtua
       if (field) {
         movement.current[field as keyof typeof movement.current] = true
       }
+      
+      // Handle apple throwing with Space key
+      if (e.code === 'Space') {
+        e.preventDefault()
+        throwApple()
+      }
     }
     
     const handleKeyUp = (e: KeyboardEvent) => {
@@ -99,7 +105,7 @@ export const Player = forwardRef<PlayerRef, PlayerProps>(({ onThrowApple, virtua
       document.removeEventListener('keydown', handleKeyDown)
       document.removeEventListener('keyup', handleKeyUp)
     }
-  }, [])
+  }, [throwApple])
 
   useFrame(() => {
     camera.position.copy(new Vector3(pos.current[0], pos.current[1], pos.current[2]))
